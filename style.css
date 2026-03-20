@@ -49,6 +49,22 @@ main p {
     margin-bottom: 1rem;
 }
 
+.headshot {
+    float: right;
+    width: 180px;
+    border-radius: 4px;
+    margin: 0 0 1rem 1.5rem;
+}
+
+@media (max-width: 500px) {
+    .headshot {
+        float: none;
+        display: block;
+        width: 140px;
+        margin: 0 0 1rem 0;
+    }
+}
+
 .work-list {
     list-style: none;
     padding: 0;
