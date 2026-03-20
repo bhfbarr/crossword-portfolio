@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #222;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    line-height: 1.6;
+}
+
+nav {
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+nav a {
+    margin-right: 1.5rem;
+    text-decoration: none;
+    color: #555;
+}
+
+nav a.active {
+    color: #222;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #222;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+main p {
+    margin-bottom: 1rem;
+}
+
+.work-list {
+    list-style: none;
+    padding: 0;
+}
+
+.work-list li {
+    margin-bottom: 0.75rem;
+}
+
+.work-list a {
+    color: #1a5276;
+}
+
+.work-list a:hover {
+    text-decoration: none;
+}
+
+a {
+    color: #1a5276;
+}
