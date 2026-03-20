@@ -7,7 +7,7 @@
 body {
     font-family: Georgia, 'Times New Roman', serif;
     color: #222;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 2rem 1.5rem;
     line-height: 1.6;
@@ -83,4 +83,89 @@ a {
     display: inline-block;
     width: 100px;
     font-weight: bold;
+}
+
+/* Crossword grid layout */
+.crossword-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.crossword-card {
+    text-decoration: none;
+    color: #222;
+    display: block;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.crossword-card:hover {
+    border-color: #999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.crossword-thumbnail {
+    background: #fff;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crossword-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.crossword-info {
+    padding: 0 0.75rem;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.crossword-card:hover .crossword-info {
+    max-height: 6rem;
+    padding: 0.6rem 0.75rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.crossword-title {
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.crossword-outlet {
+    color: #666;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.crossword-link-hint {
+    color: #1a5276;
+    font-size: 0.8rem;
+    margin-top: 0.15rem;
+}
+
+@media (max-width: 500px) {
+    .crossword-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .crossword-info {
+        max-height: none;
+        padding: 0.6rem 0.75rem;
+        border-top: 1px solid #e0e0e0;
+    }
 }
