@@ -3,7 +3,12 @@
     "allow": [
       "Bash(curl -s -H \"Accept: application/vnd.github+json\" https://api.github.com/repos/bhfbarr/crossword-portfolio/pages)",
       "Bash(mv \"/Users/beeboileau/crossword-portfolio/images/Observer 12.png\" \"/Users/beeboileau/crossword-portfolio/images/observer-12.png\")",
-      "Bash(mv \"/Users/beeboileau/crossword-portfolio/images/Vittles 2.png\" \"/Users/beeboileau/crossword-portfolio/images/vittles-2.png\")"
+      "Bash(mv \"/Users/beeboileau/crossword-portfolio/images/Vittles 2.png\" \"/Users/beeboileau/crossword-portfolio/images/vittles-2.png\")",
+      "WebFetch(domain:bhfbarr.github.io)",
+      "Bash(git pull:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "WebSearch"
     ]
   }
 }
