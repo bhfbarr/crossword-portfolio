@@ -26,9 +26,11 @@ nav {
 
 .nav-icon {
     margin-left: auto;
-    width: 28px;
-    height: auto;
+    max-width: 28px;
+    max-height: 28px;
     image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    -webkit-image-rendering: pixelated;
     opacity: 0.5;
 }
 
