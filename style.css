@@ -77,7 +77,7 @@ a {
     text-decoration: none;
 }
 
-a:hover:not(.crossword-card) {
+main a:hover:not(.crossword-card) {
     color: #c44536;
     text-decoration: underline;
 }
