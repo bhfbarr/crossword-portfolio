@@ -35,7 +35,6 @@ nav a.active {
 
 nav a:hover {
     color: #c44536;
-    text-decoration: none;
 }
 
 h1 {
@@ -60,38 +59,13 @@ main p {
     margin: 0 0 1rem 1.5rem;
 }
 
-@media (max-width: 500px) {
-    .headshot {
-        float: none;
-        display: block;
-        width: 140px;
-        margin: 0 0 1rem 0;
-    }
-}
-
-.work-list {
-    list-style: none;
-    padding: 0;
-}
-
-.work-list li {
-    margin-bottom: 0.75rem;
-}
-
-.work-list a {
-    color: #c44536;
-}
-
-.work-list a:hover {
-    text-decoration: none;
-}
 
 a {
     color: #1a1a2e;
     text-decoration: none;
 }
 
-a:hover {
+a:hover:not(.crossword-card) {
     color: #c44536;
     text-decoration: underline;
 }
@@ -137,8 +111,6 @@ a:hover {
 .crossword-card:hover {
     border-color: #999;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    color: #1a1a2e;
-    text-decoration: none;
 }
 
 .crossword-thumbnail {
@@ -189,15 +161,6 @@ a:hover {
     margin-top: 0.15rem;
 }
 
-/* Contact page photo */
-.contact-photo {
-    display: block;
-    width: 200px;
-    border-radius: 20px;
-    margin-top: 2rem;
-    margin-left: auto;
-}
-
 /* PDF viewer */
 .viewer-header {
     margin-bottom: 1.5rem;
@@ -237,8 +200,11 @@ a:hover {
 }
 
 @media (max-width: 500px) {
-    .pdf-frame {
-        height: 60vh;
+    .headshot {
+        float: none;
+        display: block;
+        width: 140px;
+        margin: 0 0 1rem 0;
     }
 
     .crossword-grid {
@@ -252,8 +218,7 @@ a:hover {
         border-top: 1px solid #e0e0e0;
     }
 
-    .contact-photo {
-        width: 160px;
-        margin-left: auto;
+    .pdf-frame {
+        height: 60vh;
     }
 }
