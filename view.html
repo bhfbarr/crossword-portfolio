@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Crossword — Beatrice Barr</title>
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+    <nav>
+        <a href="index.html">About</a>
+        <a href="work.html" class="active">Work</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main>
+        <div class="viewer-header">
+            <a href="work.html" class="viewer-back">&larr; Back to Work</a>
+            <h1 class="viewer-title"></h1>
+            <p class="viewer-outlet"></p>
+            <a class="viewer-download" download>Download PDF</a>
+        </div>
+        <div class="viewer-embed">
+            <iframe class="pdf-frame" title="Crossword PDF"></iframe>
+        </div>
+    </main>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const pdf = params.get('pdf');
+        const title = params.get('title');
+        const outlet = params.get('outlet');
+
+        if (pdf) {
+            document.querySelector('.pdf-frame').src = pdf;
+            document.querySelector('.viewer-download').href = pdf;
+        }
+        if (title) {
+            document.querySelector('.viewer-title').textContent = title;
+            document.title = title + ' — Beatrice Barr';
+        }
+        if (outlet) {
+            document.querySelector('.viewer-outlet').textContent = outlet;
+        }
+    </script>
+</body>
+</html>
