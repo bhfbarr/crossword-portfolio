@@ -8,7 +8,12 @@
       "Bash(git pull:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(pip3 install:*)",
+      "Bash(sips -s format png /Users/beeboileau/crossword-portfolio/crossword-favicon.pdf --out /Users/beeboileau/crossword-portfolio/images/crossword-favicon-original.png)",
+      "Bash(python3 -c \":*)",
+      "Bash(git push:*)",
+      "Bash(python3:*)"
     ]
   }
 }
