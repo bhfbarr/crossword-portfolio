@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Crossword — Beatrice Barr</title>
+    <meta name="description" content="View and download crossword PDFs by Beatrice Barr.">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css?v=3">
-    <script data-goatcounter="https://bee.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
     <nav>
@@ -44,6 +43,13 @@
         if (outlet) {
             document.querySelector('.viewer-outlet').textContent = outlet;
         }
+
+        // Fire GoatCounter after title is set so it tracks the correct page title
+        var gc = document.createElement('script');
+        gc.dataset.goatcounter = 'https://bee.goatcounter.com/count';
+        gc.async = true;
+        gc.src = 'https://gc.zgo.at/count.js';
+        document.head.appendChild(gc);
     </script>
 </body>
 </html>
