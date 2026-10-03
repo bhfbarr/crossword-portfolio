@@ -159,12 +159,14 @@ main a:hover:not(.crossword-card) {
 .crossword-title {
     font-weight: bold;
     font-size: 0.95rem;
+    text-wrap: balance;
 }
 
 .crossword-outlet {
     color: #666;
     font-size: 0.85rem;
     font-style: italic;
+    text-wrap: balance;
 }
 
 .crossword-link-hint {
@@ -219,15 +221,48 @@ main a:hover:not(.crossword-card) {
         margin: 0 0 1rem 0;
     }
 
+    /* Two smaller columns; info is always shown, so cards can stretch to equal row heights */
     .crossword-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 0.75rem;
+        align-items: stretch;
+    }
+
+    .crossword-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .crossword-thumbnail {
+        padding: 0.4rem;
     }
 
     .crossword-info {
+        flex-grow: 1;
         max-height: none;
-        padding: 0.6rem 0.75rem;
+        padding: 0.45rem 0.5rem 0.55rem;
+        gap: 0.1rem;
         border-top: 1px solid #e0e0e0;
+    }
+
+    .crossword-title {
+        font-size: 0.8rem;
+        line-height: 1.25;
+    }
+
+    .crossword-outlet {
+        font-size: 0.75rem;
+        line-height: 1.3;
+    }
+
+    .crossword-date,
+    .crossword-link-text {
+        display: none;
+    }
+
+    .crossword-link-hint {
+        font-size: 0.85rem;
+        margin-top: auto;
+        line-height: 1;
     }
 
     .pdf-frame {
